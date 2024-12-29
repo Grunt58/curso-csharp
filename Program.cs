@@ -47,4 +47,22 @@ namespace Clase
             return matrizElementos[elementoPa];
         }
     }
+
+    class Alumno
+    {
+        // Campos
+        double calificacion;
+
+        // Constructor
+        public Alumno(double calificacionPa)
+        {
+            calificacion = calificacionPa;
+        }
+
+        // Propiedades
+        public double Calificacion
+        {
+            get => calificacion;
+        }
+    }
 }
