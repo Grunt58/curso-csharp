@@ -7,19 +7,29 @@ namespace Clase
         static void Main(string[] args)
         {
             // Variables locales
-            string valorElemento;
+            Alumno valorElemento;
 
             // Instanciando la clase
             GuardaObjetos objetos1 = new GuardaObjetos(3);
 
-            // Agregar objetos
-            objetos1.AgregarElementos("Luis");
-            objetos1.AgregarElementos("José");
-            objetos1.AgregarElementos("Juan");
+            // Instanciamos a la clase "Alumno"
+            Alumno alumno1 = new Alumno(8.5);
+            Alumno alumno2 = new Alumno(10);
+            Alumno alumno3 = new Alumno(6.8);
+
+            // Agregar objetos a la clase "GuardarObjetos"
+            objetos1.AgregarElementos(alumno1);
+            objetos1.AgregarElementos(alumno2);
+            objetos1.AgregarElementos(alumno3);
+
+            //// Agregar objetos
+            //objetos1.AgregarElementos("Luis");
+            //objetos1.AgregarElementos("José");
+            //objetos1.AgregarElementos("Juan");
 
             // Obtener elemento
-            valorElemento = (string)objetos1.ObtenerElemento(2);
-            Console.WriteLine(valorElemento);
+            valorElemento = (Alumno)objetos1.ObtenerElemento(2);
+            Console.WriteLine(valorElemento.Calificacion);
         }
     }
 
