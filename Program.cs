@@ -10,7 +10,7 @@ namespace Clase
             Alumno valorElemento;
 
             // Instanciando la clase
-            GuardaObjetos objetos1 = new GuardaObjetos(3);
+            GuardaObjetos<Alumno> objetos1 = new GuardaObjetos<Alumno>(3);
 
             // Instanciamos a la clase "Alumno"
             Alumno alumno1 = new Alumno(8.5);
@@ -28,31 +28,31 @@ namespace Clase
             //objetos1.AgregarElementos("Juan");
 
             // Obtener elemento
-            valorElemento = (Alumno)objetos1.ObtenerElemento(2);
+            valorElemento = objetos1.ObtenerElemento(2);
             Console.WriteLine(valorElemento.Calificacion);
         }
     }
 
-    class GuardaObjetos
+    class GuardaObjetos<T>
     {
         // Campos
         private int i = 0;
-        private object[] matrizElementos;
+        private T[] matrizElementos;
 
         //Constructor
         public GuardaObjetos(int elementosPa)
         {
-            matrizElementos = new object[elementosPa];
+            matrizElementos = new T[elementosPa];
         }
 
         // Métodos
-        public void AgregarElementos(object elementoPa)
+        public void AgregarElementos(T elementoPa)
         {
             matrizElementos[i] = elementoPa;
             i++;
         }
 
-        public object ObtenerElemento(int elementoPa)
+        public T ObtenerElemento(int elementoPa)
         {
             return matrizElementos[elementoPa];
         }
