@@ -35,10 +35,10 @@ namespace Clase
                 }
 
                 Console.WriteLine("Información en la List: \n");
-                // Mostramos los elementos de la List
-                for (int i = 0; i < Personas.Count(); i++)
+                // Instrucción "foreach" para recorrer una colección
+                foreach (string elemento in Personas)
                 {
-                    Console.WriteLine(Personas[i]);
+                    Console.WriteLine(elemento);
                 }
 
             } while (opcion != 2);
