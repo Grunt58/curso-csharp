@@ -44,21 +44,11 @@ namespace Clase
                 Console.WriteLine(elemento);
             }
 
-            // Insertamos un elemento en la List
-            Personas.Insert(2, "Victor");
+            Console.Write("\nIngresa el elemento a buscar en la List: ");
+            elem = Console.ReadLine();
 
-            Console.WriteLine("Información en la List actualizada: \n");
-            foreach (string elemento in Personas)
-            {
-                Console.WriteLine(elemento);
-            }
-
-            for (int i = 0; i < Personas.Count(); i++)
-            {
-                Console.WriteLine(Personas[i]);
-            }
-
-            Console.WriteLine($"Número de elementos en List: {Personas.Count()}");
+            // Buscar el elemento en la List
+            Console.WriteLine($"El elemento de encuentra en el índice: {Personas.IndexOf(elem)}");
         }
     }
 }
