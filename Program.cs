@@ -44,11 +44,10 @@ namespace Clase
                 Console.WriteLine(elemento);
             }
 
-            Console.Write("\nIngresa el elemento a buscar en la List: ");
-            elem = Console.ReadLine();
+            Console.WriteLine("Ejecutando el método 'Clear()'");
+            Personas.Clear();
 
-            // Buscar el elemento en la List
-            Console.WriteLine($"El elemento de encuentra en el índice: {Personas.IndexOf(elem)}");
+            Console.WriteLine($"\nElementos en la List: {Personas.Count}");
         }
     }
 }
