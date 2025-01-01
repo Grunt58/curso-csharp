@@ -33,6 +33,14 @@ namespace Clase
 
                     Personas.Add(elem);
                 }
+
+                Console.WriteLine("Información en la List: \n");
+                // Mostramos los elementos de la List
+                for (int i = 0; i < Personas.Count(); i++)
+                {
+                    Console.WriteLine(Personas[i]);
+                }
+
             } while (opcion != 2);
         }
     }
