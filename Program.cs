@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Xml.Linq;
 
 namespace Clase
 {
@@ -17,31 +18,47 @@ namespace Clase
             Personas.Add("Hugo");
             Personas.Add("Miguel");
             Personas.Add("Diana");
-            Personas.Add("Erick");
+            Personas.Add("Héctor");
 
-            do
+            //do
+            //{
+            //    Console.WriteLine("1. Agregar elemento");
+            //    Console.WriteLine("2. Salir");
+
+            //    opcion = Convert.ToInt32(Console.ReadLine());
+
+            //    if (opcion == 1)
+            //    {
+            //        Console.Write("Ingresa el elemento a agregar en la lista: ");
+            //        elem = Console.ReadLine();
+
+            //        Personas.Add(elem);
+            //    }
+
+            //} while (opcion != 2);
+
+            Console.WriteLine("Información en la List: \n");
+            // Instrucción "foreach" para recorrer una colección
+            foreach (string elemento in Personas)
             {
-                Console.WriteLine("1. Agregar elemento");
-                Console.WriteLine("2. Salir");
+                Console.WriteLine(elemento);
+            }
 
-                opcion = Convert.ToInt32(Console.ReadLine());
+            // Insertamos un elemento en la List
+            Personas.Insert(2, "Victor");
 
-                if (opcion == 1)
-                {
-                    Console.Write("Ingresa el elemento a agregar en la lista: ");
-                    elem = Console.ReadLine();
+            Console.WriteLine("Información en la List actualizada: \n");
+            foreach (string elemento in Personas)
+            {
+                Console.WriteLine(elemento);
+            }
 
-                    Personas.Add(elem);
-                }
+            for (int i = 0; i < Personas.Count(); i++)
+            {
+                Console.WriteLine(Personas[i]);
+            }
 
-                Console.WriteLine("Información en la List: \n");
-                // Instrucción "foreach" para recorrer una colección
-                foreach (string elemento in Personas)
-                {
-                    Console.WriteLine(elemento);
-                }
-
-            } while (opcion != 2);
+            Console.WriteLine($"Número de elementos en List: {Personas.Count()}");
         }
     }
 }
