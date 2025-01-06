@@ -8,7 +8,8 @@ namespace Clase
     {
         static void Main(string[] args)
         {
-            
+            // Stack
+            Stack<double> miPila = new Stack<double>();
         }
     }
 }
