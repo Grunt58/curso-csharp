@@ -25,6 +25,17 @@ namespace Clase
             {
                 Console.WriteLine($"[{i++}]: {elemento}");
             }
+
+            // Después de insertar un elemento
+            Console.WriteLine("\nDespués de insertar un elemento\n");
+            miPila.Push(1.5);
+            i = 0;
+
+            // Mostrar la información del Stack
+            foreach(double elemento in miPila)
+            {
+                Console.WriteLine($"[{i++}]: {elemento}");
+            }
         }
     }
 }
