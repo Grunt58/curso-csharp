@@ -10,6 +10,21 @@ namespace Clase
         {
             // Stack
             Stack<double> miPila = new Stack<double>();
+
+            // Insertar objetos al principio del Stack
+            miPila.Push(5.9);
+            miPila.Push(13.1);
+            miPila.Push(8.7);
+            miPila.Push(3.2);
+            miPila.Push(10.5);
+
+            int i = 0; // Mostrar índice
+
+            // Mostrar la información del Stack
+            foreach(double elemento in miPila)
+            {
+                Console.WriteLine($"[{i++}]: {elemento}");
+            }
         }
     }
 }
