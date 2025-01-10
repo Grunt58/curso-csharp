@@ -39,7 +39,7 @@ namespace Clase
 
             // Después de quitar un elemento
             Console.WriteLine("\nDespués de quitar un elemento\n");
-            miPila.Pop();
+            var eliminado = miPila.Pop();
             i = 0; // Reiniciamos el valor del índice
 
             // Mostrar la información del Stack
@@ -47,6 +47,8 @@ namespace Clase
             {
                 Console.WriteLine($"[{i++}]: {elemento}");
             }
+
+            Console.WriteLine($"El elemento ({eliminado}) se ha eliminado con éxito.");
         }
     }
 }
