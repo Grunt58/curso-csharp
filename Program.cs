@@ -82,6 +82,11 @@ namespace Clase
             }
 
             Console.WriteLine($"\nEl Stack contiene {miPila.Count} elementos.");
+
+            // Borrando el Stack
+            Console.WriteLine("\nDespués de borrar el Stack");
+            miPila.Clear();
+            Console.WriteLine($"\nEl Stack contiene {miPila.Count} elementos.");
         }
     }
 }
