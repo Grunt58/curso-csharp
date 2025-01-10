@@ -49,6 +49,19 @@ namespace Clase
             }
 
             Console.WriteLine($"El elemento ({eliminado}) se ha eliminado con éxito.");
+
+            //Después de usar Peek()
+            Console.WriteLine("\nDespués de usar Peek()\n");
+            var primerObj = miPila.Peek();
+            i = 0; // Reiniciamos el valor del índice
+
+            // Mostrar la información del Stack
+            foreach (double elemento in miPila)
+            {
+                Console.WriteLine($"[{i++}]: {elemento}");
+            }
+
+            Console.WriteLine($"El primer elemento del Stack es: ({primerObj})");
         }
     }
 }
