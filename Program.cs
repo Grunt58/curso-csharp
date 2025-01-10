@@ -80,6 +80,8 @@ namespace Clase
             {
                 Console.WriteLine($"No se encontró el objeto ({buscarElem}) en el Stack");
             }
+
+            Console.WriteLine($"\nEl Stack contiene {miPila.Count} elementos.");
         }
     }
 }
