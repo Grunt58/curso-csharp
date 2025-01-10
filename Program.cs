@@ -62,6 +62,24 @@ namespace Clase
             }
 
             Console.WriteLine($"El primer elemento del Stack es: ({primerObj})");
+
+            // Saber si el Stack contiene el elemento
+            bool contiene;
+            double buscarElem;
+
+            Console.Write("\nIngresa el elemento a buscar: ");
+            buscarElem = Convert.ToDouble(Console.ReadLine());
+
+            contiene = miPila.Contains(buscarElem);
+
+            if (contiene)
+            {
+                Console.WriteLine($"El objeto ({buscarElem}) se encuentra en el Stack");
+            }
+            else
+            {
+                Console.WriteLine($"No se encontró el objeto ({buscarElem}) en el Stack");
+            }
         }
     }
 }
