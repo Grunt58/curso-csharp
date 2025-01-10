@@ -36,6 +36,17 @@ namespace Clase
             {
                 Console.WriteLine($"[{i++}]: {elemento}");
             }
+
+            // Después de quitar un elemento
+            Console.WriteLine("\nDespués de quitar un elemento\n");
+            miPila.Pop();
+            i = 0; // Reiniciamos el valor del índice
+
+            // Mostrar la información del Stack
+            foreach(double elemento in miPila)
+            {
+                Console.WriteLine($"[{i++}]: {elemento}");
+            }
         }
     }
 }
