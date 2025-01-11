@@ -10,7 +10,7 @@ namespace Clase
         {
             // Queue o cola
             // El primero en entrar, el primero en salir
-            Queue<T> nombre = new Queue<T>;
+            Queue<char> nombre = new Queue<char>();
 
         }
     }
