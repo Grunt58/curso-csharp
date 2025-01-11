@@ -36,6 +36,18 @@ namespace Clase
             {
                 Console.WriteLine($"[{i++}]: {elemento}");
             }
+
+            // Después de quitar un elemento
+            Console.WriteLine("Después de quitar el elemento\n");
+            var objElim = miFila.Dequeue();
+
+            i = 0;
+            // Recorriendo la Queue
+            foreach (char elemento in miFila)
+            {
+                Console.WriteLine($"[{i++}]: {elemento}");
+            }
+            Console.WriteLine($"\n({objElim}) fue eliminado correctamente");
         }
     }
 }
