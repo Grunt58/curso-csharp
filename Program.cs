@@ -45,7 +45,38 @@ namespace Clase
             Console.WriteLine($"\nLa edad de Erica es: {empleados["Erica"]}\n");
 
             // Si no se encuetra la clave
-            Console.WriteLine($"\nLa edad de Erica es: {empleados["Maria"]}\n");
+            // Console.WriteLine($"\nLa edad de Erica es: {empleados["Maria"]}\n");
+
+            Console.WriteLine("\nDespués de remover un elemento\n");
+
+            empleados.Remove("Erica");
+
+            foreach (KeyValuePair<string, int> elemento in empleados)
+            {
+                Console.WriteLine($"Key = {elemento.Key}, Value = {elemento.Value}");
+            }
+
+            Console.WriteLine();
+
+            if (empleados.ContainsKey("Erica"))
+            {
+                Console.WriteLine("La key se encuentra en la colección");
+            }
+            else
+            {
+                Console.WriteLine("La key no se encuentra en la colección");
+            }
+
+            Console.WriteLine();
+
+            if (empleados.ContainsValue(50))
+            {
+                Console.WriteLine("Existe al menos alguien con esa edad");
+            }
+            else
+            {
+                Console.WriteLine("No se encotró nadie con esa edad");
+            }
         }
     }
 }
