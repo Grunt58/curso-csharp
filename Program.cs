@@ -25,6 +25,7 @@ namespace Clase
                 Console.WriteLine("2. Buscar contacto");
                 Console.WriteLine("3. Eliminar contacto");
                 Console.WriteLine("4. Mostrar contacto");
+                Console.WriteLine("5. Actualizar contacto");
 
                 Console.Write("\nEscoge una opción: ");
                 opcion = Convert.ToInt32(Console.ReadLine());
@@ -101,9 +102,33 @@ namespace Clase
                         Console.WriteLine("\nPresiona cualquier tecla para regresar al menú...");
                         Console.ReadKey();
                         break;
+
+                    case 5:
+                        Console.Write("Nombre del contacto para actualizar: ");
+                        nombre = Console.ReadLine();
+
+                        if (contactos.ContainsKey(nombre))
+                        {
+                            Console.Write("\nNuevo número: ");
+                            numero = Convert.ToInt64(Console.ReadLine());
+
+                            contactos[nombre] = numero;
+                            Console.WriteLine($"\n({nombre}) ha sido actualizado con éxito");
+
+                            Console.WriteLine("\nPresiona cualquier tecla para regresar al menú...");
+                            Console.ReadKey();
+                        }
+                        else
+                        {
+                            Console.WriteLine("\n¡El contacto no existe!");
+
+                            Console.WriteLine("\nPresiona cualquier tecla para regresar al menú...");
+                            Console.ReadKey();
+                        }
+                        break;
                 }
 
-            } while (opcion >= 1 && opcion <= 4);
+            } while (opcion >= 1 && opcion <= 5);
         }
     }
 }
