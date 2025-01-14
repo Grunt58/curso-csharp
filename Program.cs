@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 
-
 namespace Clase
 {
     internal class Program
